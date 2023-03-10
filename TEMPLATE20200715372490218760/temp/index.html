@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- CSS插件样式 -->
+    <link rel="stylesheet" href="../site313/swiper.min.css" />
+    <!-- 自用CSS样式 -->
+    <link rel="stylesheet" href="../site313/adaptive.css" />
+    <link rel="stylesheet" href="../site313/index.css" />
+    <link rel="stylesheet" href="../site313/top.css" />
+    <link rel="stylesheet" href="../site313/bottom.css" />
+    <title>天津市体育局</title>
+    <meta name="keyword" content="天津市体育局"/>
+    <meta name="description" content="天津市体育局"/>
+    <!-- 自用JS -->
+    <script src="../site313/index.js"></script>
+    <!-- JS插件 -->
+    <script src="../site313/jquery.min.js"></script>
+    <script src="../site313/swiper.min.js"></script>
+    <script src="../site313/transform.js"></script>
+    <!-- 自用JS -->
+    <script src="../site313/top.js"></script>
+    <script src="../site313/bottom.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        (function () {
+            var list = $('.nav_item');
+            console.log("headtag======"+$("#headtag").val());
+            $('.nav_item').each(function(k,v){
+                if ($(v).text().replace(/\s*/g,"")==$("#headtag").val()) {
+                    $(v).addClass('current');
+                }
+            });
+        })();
+        //新闻
+        $(".news_title_content").mouseover(function () {
+            $(".news_title_content").removeClass('news_current');
+            $(this).addClass('news_current');
+            pType = $(this).data("type");
+            $(".news_"+pType).addClass('news_content_show').siblings().removeClass('news_content_show');
+        });
+        $(".news_title_content_2").mouseover(function () {
+          $(".news_title_content_2").removeClass('news_current');
+          $(this).addClass('news_current');
+          pType_2 = $(this).data("type");
+          $(".news_"+pType_2).addClass('news_content_show').siblings().removeClass('news_content_show');
+        });
+        // 轮播图
+        var mySwiper0 = new Swiper(".swiper-container0", {
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          loop: true,
+          centeredSlides: true,
+          paginationClickable: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+        mySwiper0.el.onmouseover = function(){
+          mySwiper0.autoplay.stop();
+        }
+        mySwiper0.el.onmouseout = function(){
+          mySwiper0.autoplay.start();
+        }
+        var mySwiper1 = new Swiper(".swiper-container1", {
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          loop: true,
+          centeredSlides: true,
+          pagination: {
+            el: ".pagination",
+            type: "custom",
+            autoplayDisableOnInteraction: true,
+            renderCustom: function (swiper, current, total) {
+              var _html = "";
+              for (var i = 1; i <= total; i++) {
+                if (current == i) {
+                  _html += '<p class="swiper_custom active" data-k="'+i+'">' + "专题" + i + "</p>";
+                } else {
+                  _html += '<p class="swiper_custom" data-k="'+i+'">' + "专题" + i + "</p>";
+                }
+              }
+              return _html;
+            },
+          },
+          paginationClickable: true,
+          navigation: {
+            nextEl: ".button-next",
+            prevEl: ".button-prev",
+          },
+        });
+        mySwiper1.el.onmouseover = function(){
+          mySwiper1.autoplay.stop();
+        }
+        mySwiper1.el.onmouseout = function(){
+          mySwiper1.autoplay.start();
+        }
+        $(".pagination").on("click", "p", function () {
+          var index = $(this).data('k');
+          var sindex = 1; // 第二个轮播图
+          mySwiper1.slideTo(index, 500, false);
+        });
+      })
+    </script>
+  </head>
+  <body>
+    <input type="hidden" id="headtag" name="headtag" value="首页" />
+    <TRS_TEMPLATE TEMPNAME="top"></TRS_TEMPLATE>
+    <div class="top_slogan">
+      <img src="../site313/top_slogan.jpg" />
+    </div>
+    <!-- swiper&&news -->
+    <div class="content_A">
+      <div class="content_swiper2 col-lg-6 col-xs-12">
+        <div class="swiper-container swiper-container0">
+          <div class="swiper-wrapper">
+             <TRS_DOCUMENTS ID="首页" ORDER="wcmchnldoc.docreltime desc" NUM="4">
+	        <div class="swiper-slide">
+                   <a href="<TRS_DOCUMENT AUTOLINK=false FIELD=_RECURL/>" target="_blank" onFocus="this.blur()">
+                         <img src="<TRS_CONTIMG INDEX="1" FIELD="url" FIRSTFROM="appendix"/>" alt="<TRS_DOCUMENT FIELD=DOCTITLE num=56 autolink=false />" title="<TRS_DOCUMENT FIELD=DOCTITLE num=56 autolink=false />" />
+                   </a>
+                </div>
+	   </TRS_DOCUMENTS>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>  
+      <div class="news_A col-lg-6 col-xs-12">
+        <div class="news_title">
+          <div data-type="0" class="news_title_content news_current">
+            市局动态
+            <div class="news_current_triangle"></div>
+          </div>
+          <div data-type="1" class="news_title_content">
+            各区动态
+            <div class="news_current_triangle"></div>
+          </div>
+          <div data-type="2" class="news_title_content">
+            综合资讯
+            <div class="news_current_triangle"></div>
+          </div>
+        </div>
+        <div class="news_content">
+          <div class="col-lg-12 news_content_details news_0 news_content_show">
+            <TRS_DOCUMENTS ID="政务公开"  num="5">
+                 <a href="<TRS_DOCUMENT FIELD=_RECURL/>"><p><TRS_DOCUMENT FIELD="DOCTITLE" AUTOLINK="false"></TRS_DOCUMENT></p><span><TRS_DOCUMENT FIELD="DOCPUBTIME" dateformat="yyyy-MM-dd"></TRS_DOCUMENT></span></a>
+             </TRS_DOCUMENTS>
+          </div>
+          <div class="col-lg-12 news_content_details news_1">
+            <TRS_DOCUMENTS ID="政民互动"  num="5">
+                  <a href="<TRS_DOCUMENT FIELD=_RECURL/>"><p><TRS_DOCUMENT FIELD="DOCTITLE" AUTOLINK="false"></TRS_DOCUMENT></p><span><TRS_DOCUMENT FIELD="DOCPUBTIME" dateformat="yyyy-MM-dd"></TRS_DOCUMENT></span></a>
+             </TRS_DOCUMENTS>
+          </div>
+          <div class="col-lg-12 news_content_details news_2">
+            <TRS_DOCUMENTS ID="政务公开"  num="5">
+                  <a href="<TRS_DOCUMENT FIELD=_RECURL/>"><p><TRS_DOCUMENT FIELD="DOCTITLE" AUTOLINK="false"></TRS_DOCUMENT></p><span><TRS_DOCUMENT FIELD="DOCPUBTIME" dateformat="yyyy-MM-dd"></TRS_DOCUMENT></span></a>
+             </TRS_DOCUMENTS>
+          </div>
+        </div>
+        <div class="news_content_more"><a href="#">查看更多》</a></div>
+      </div>
+    </div>
+    <!-- sort -->
+    <div class="content_B row"> 
+      <div class="sort_content col-lg-2 col-xs-4">
+        <a href="<TRS_CHANNEL ID='全民健身' FIELD='_recurl'/>">
+          <img src="../site313/content_sort_1.jpg" />
+        </a>
+      </div>
+      <div class="sort_content col-lg-2 col-xs-4">
+        <a href="<TRS_CHANNEL ID='竞技体育' FIELD='_recurl'/>">
+          <img src="../site313/content_sort_2.jpg" />
+        </a>
+      </div>
+      <div class="sort_content col-lg-2 col-xs-4">
+        <a href="<TRS_CHANNEL ID='青少年体育' FIELD='_recurl'/>">
+          <img src="../site313/content_sort_3.jpg" />
+        </a>
+      </div>
+      <div class="sort_content col-lg-2 col-xs-4">
+        <a href="<TRS_CHANNEL ID='体育产业' FIELD='_recurl'/>">
+          <img src="../site313/content_sort_4.jpg" />
+        </a>
+      </div>
+      <div class="sort_content col-lg-2 col-xs-4">
+        <a href="<TRS_CHANNEL ID='体育文化' FIELD='_recurl'/>">
+          <img src="../site313/content_sort_5.jpg" />
+        </a>
+      </div>
+      <div class="sort_content col-lg-2 col-xs-4">
+        <a href="<TRS_CHANNEL ID='体育科教' FIELD='_recurl'/>">
+          <img src="../site313/content_sort_6.jpg" />
+        </a>
+      </div>
+    </div>
+    <!-- news&&topic -->
+    <div class="content_C row">
+      <div class="news_B col-lg-5 col-xs-12">
+        <div class="news_title_2">
+          <div data-type="3" class="news_title_content_2 news_current">
+            通知公告
+            <div class="news_current_triangle"></div>
+          </div>
+          <div data-type="4" class="news_title_content_2">
+            竞赛规程
+            <div class="news_current_triangle"></div>
+          </div>
+        </div>
+        <div class="news_content news_content_2">
+          <div class="col-lg-12 news_content_details2 news_3 news_content_show">
+            <TRS_DOCUMENTS ID="政民互动"  num="5">
+                  <a href="<TRS_DOCUMENT FIELD=_RECURL/>"><p><TRS_DOCUMENT FIELD="DOCTITLE" AUTOLINK="false"></TRS_DOCUMENT></p><span><TRS_DOCUMENT FIELD="DOCPUBTIME" dateformat="yyyy-MM-dd"></TRS_DOCUMENT></span></a>
+             </TRS_DOCUMENTS>
+          </div>
+          <div class="col-lg-12 news_content_details2 news_4">
+            <TRS_DOCUMENTS ID="政务公开"  num="5">
+                  <a href="<TRS_DOCUMENT FIELD=_RECURL/>"><p><TRS_DOCUMENT FIELD="DOCTITLE" AUTOLINK="false"></TRS_DOCUMENT></p><span><TRS_DOCUMENT FIELD="DOCPUBTIME" dateformat="yyyy-MM-dd"></TRS_DOCUMENT></span></a>
+             </TRS_DOCUMENTS>
+          </div>
+          <div class="news_content_more"><a href="#">查看更多》</a></div>
+        </div>
+      </div>
+      <div class="content_swiper col-lg-7 col-xs-12">
+        <div class="swiper_btn">
+          <div class="button-prev">
+            <img class="swiper_btn_img" src="../site313/content_swiper_1.png" />
+          </div>
+          <div class="pagination">
+            <TRS_DOCUMENTS ID="专题专栏"  num="4">
+               <p class="swiper_custom"><TRS_DOCUMENT FIELD=DOCTITLE autolink=false/></p>
+             </TRS_DOCUMENTS>
+          </div>
+          <div class="button-next">
+            <img class="swiper_btn_img" src="../site313/content_swiper_2.png" />
+          </div>
+        </div>
+        <div class="swiper-container swiper-container1">
+          <div class="swiper-wrapper">
+            <TRS_DOCUMENTS ID="专题专栏"  num="4">
+                   <div class="swiper-slide">
+                  <a href="<TRS_DOCUMENT FIELD=_RECURL/>">
+                    <img src="<TRS_CONTIMG INDEX="1" FIELD="url" FIRSTFROM="appendix"/>" alt="<TRS_DOCUMENT FIELD=DOCTITLE num=56 autolink=false />" title="<TRS_DOCUMENT FIELD=DOCTITLE num=56 autolink=false />" />
+                    <div class="swiper_img_title"><TRS_DOCUMENT FIELD=DOCTITLE autolink=false/></div>
+                   </a>
+                   </div>
+             </TRS_DOCUMENTS>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <!-- support -->
+    <div class="content_D row">
+        <TRS_DOCUMENTS ID="友情链接2" NUM="3">
+               <div class="support col-lg-4 col-xs-12">
+                   <a href="<TRS_DOCUMENT AUTOLINK=false FIELD=_RECURL/>">
+                      <img src="<TRS_CONTIMG INDEX="1" FIELD="url" FIRSTFROM="appendix"/>" alt="<TRS_DOCUMENT FIELD=DOCTITLE num=56 autolink=false />" title="<TRS_DOCUMENT FIELD=DOCTITLE num=56 autolink=false />" />
+                   </a>
+               </div>
+	</TRS_DOCUMENTS>
+    </div>
+    <!-- business&&operating -->
+    <div class="content_E row">
+      <div class="business col-lg-8 col-xs-12">
+        <div class="col-lg-2 col-xs-2">
+          <a href="#">
+            <div class="business_left">
+              <p>政</p>
+              <p>务</p>
+              <p>公</p>
+              <p>开</p>
+              <img class="business_left_img" src="../site313/content_business_10.png" />
+            </div>
+          </a>
+        </div>
+        <div class="business_right_all col-lg-10 col-xs-10">
+          <div class="col-lg-3 col-xs-3">
+           <a href="<TRS_CHANNEL ID='政府信息公开指南' FIELD='_recurl'/>">
+              <div class="business_right">
+                <img src="../site313/content_business_1.png" />
+                <p>政府信息公开指南</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-xs-3">
+            <a href="<TRS_CHANNEL ID='政府信息公开制度' FIELD='_recurl'/>">
+              <div class="business_right">
+                <img src="../site313/content_business_2.png" />
+                <p>政府信息公开制度</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-xs-3">
+            <a href="<TRS_CHANNEL ID='法定主动公开内容' FIELD='_recurl'/>">
+              <div class="business_right">
+                <img src="../site313/content_business_3.png" />
+                <p>法定主动公开内容</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-xs-3">
+            <a href="<TRS_CHANNEL ID='政府信息公开年报' FIELD='_recurl'/>">
+              <div class="business_right">
+                <img src="../site313/content_business_4.png" />
+                <p>政府信息公开年报</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-xs-3">
+            <a href="<TRS_CHANNEL ID='权责清单' FIELD='_recurl'/>">
+              <div class="business_right">
+                <img src="../site313/content_business_5.png" />
+                <p>权责清单</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-xs-3">
+            <a href="<TRS_CHANNEL ID='职责清单' FIELD='_recurl'/>">
+              <div class="business_right">
+                <img src="../site313/content_business_6.png" />
+                <p>职责清单</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-xs-3">
+            <a href="<TRS_CHANNEL ID='政策文件' FIELD='_recurl'/>">
+              <div class="business_right">
+                <img src="../site313/content_business_7.png" />
+                <p>政策文件</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-xs-3">
+            <a href="<TRS_CHANNEL ID='政策解读' FIELD='_recurl'/>">
+              <div class="business_right">
+                <img src="../site313/content_business_8.png" />
+                <p>政策解读</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="operating col-lg-4 col-xs-12">
+        <a href="https://www.baidu.com/"><img class="operating_A" src="../site313/content_operating.jpg" /></a>
+        <div class="operating_B">
+          <div class="operating_B_content col-lg-4 col-xs-4">
+            <a href="#" style='text-decoration:none;'>
+              <div class="operating_B_1" onmouseenter="bigImgA()" onmouseleave="normalImgA()">
+                <img class="operating_B_1_img1" src="../site313/content_operating_A_1.png" />
+                <img class="operating_B_1_img2 operating_B_1_img2_none" src="../site313/content_operating_A_2.png" />
+                <p>政民零距离</p>
+              </div>
+            </a>
+          </div>
+          <div class="operating_B_content col-lg-4 col-xs-4">
+            <a href="#" style='text-decoration:none;'>
+              <div class="operating_B_2" onmouseenter="bigImgB()" onmouseleave="normalImgB()">
+                <img class="operating_B_2_img1" src="../site313/content_operating_B_1.png" />
+                <img class="operating_B_2_img2 operating_B_2_img2_none" src="../site313/content_operating_B_2.png" />
+                <p>调查征集</p>
+              </div>
+            </a>
+          </div>
+          <div class="operating_B_content col-lg-4 col-xs-4">
+            <a href="#" style='text-decoration:none;'>
+              <div class="operating_B_3" onmouseenter="bigImgC()" onmouseleave="normalImgC()">
+                <img class="operating_B_3_img1" src="../site313/content_operating_C_1.png" />
+                <img class="operating_B_3_img2 operating_B_3_img2_none" src="../site313/content_operating_C_2.png" />
+                <p>信访举报专区</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <TRS_TEMPLATE TEMPNAME="bottom"></TRS_TEMPLATE>
+  </body>
+</html>

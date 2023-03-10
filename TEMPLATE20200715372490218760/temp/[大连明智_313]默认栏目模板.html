@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <TITLE><TRS_CHANNEL ID="OWNER" FIELD="CHNLDESC" AUTOLINK="false" /></TITLE>
+    <LINK href="style.css" rel="stylesheet" type="text/css">
+</HEAD>
+<BODY><FONT style="margin:0 5%;font-size:10.8pt;line-height:150%">
+     <input type="hidden" id="headtag" name="headtag" value="政务公开" />
+     <TRS_TEMPLATE TEMPNAME="top"></TRS_TEMPLATE>
+    <table width="90%" align="center" cellpadding="10">
+        <tr>
+            <td colspan="2"><b>当前位置：&nbsp;</b>
+                <TRS_CURPAGE VALUE="&nbsp;>&nbsp;">显示当前位置</TRS_CURPAGE>
+                <br></td>
+        </tr>
+        <tr>
+            <td width="20%" style="background-color:#d0e4ed">
+                <TRS_CHANNELS STARTPOS=0 ID="OWNER">
+                    <TRS_CHANNEL FIELD="CHNLDESC" AUTOLINK="true">子栏目名称</TRS_CHANNEL>
+                    <BR></TRS_CHANNELS>
+            </td>
+            <td>
+                <TABLE cellpadding="10">
+                    <TR>
+                        <TD width="70%" align="left"><b>文档标题</b></TD>
+                        <TD width="30%" align="left"><b>发布日期</b></TD>
+                    </TR>
+                    <TRS_DOCUMENTS>
+                        <TR>
+                            <TD width="70%" align="left">
+                                <TRS_DOCUMENT FIELD="DOCTITLE">标题放于此处</TRS_DOCUMENT>
+                            </TD>
+                            <TD width="30%" align="left">
+                                <TRS_DOCUMENT FIELD="DOCPUBTIME">日期放于此处</TRS_DOCUMENT>
+                            </TD>
+                        </TR>
+                    </TRS_DOCUMENTS>
+                </TABLE>
+            </td>
+        </tr>
+    </table>
+</FONT>
+<TRS_TEMPLATE TEMPNAME="bottom"></TRS_TEMPLATE>
+</BODY>
+</HTML>

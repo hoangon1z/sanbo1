@@ -1,0 +1,28 @@
+server:
+  port: 6002 #服务端口
+spring:
+  application:
+    name: app-config-server #指定服务名
+  cloud:
+    config:
+      server:
+        git: #配置git仓库地址
+          skipSslValidation: true #跳过HTTPS验证
+          uri: https://gitee.com/wmf217/mbiz-cloud-config.git
+          #          uri: https://github.com/wmf217/SpringCloudConfig.git
+          #          search-paths:
+          #          - 		#配置文件目录地址
+          username: wmf217      #GITEE账号（公有项目不需要设置）
+          password: tjuq9mq8t3    #GITEE密码（公有项目不需要设置）
+      label: kick    #分支名称
+eureka:
+  instance:
+    instance-id: ${spring.application.name}
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7000/eureka/
+    #需要注册到注册中心
+    register-with-eureka: true
+    #是否需要从eureka上检索服务
+    fetch-registry: true

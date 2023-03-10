@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<WCMTEMPLATES>
+  <WCMTEMPLATE Version="6.0">
+    <PROPERTIES>
+      <TEMPNAME><![CDATA[bottom]]></TEMPNAME>
+      <TEMPTYPE>0</TEMPTYPE>
+      <TEMPEXT><![CDATA[]]></TEMPEXT>
+      <OUTPUTFILENAME><![CDATA[]]></OUTPUTFILENAME>
+      <VISUAL/>
+      <TEMPDESC><![CDATA[底部]]></TEMPDESC>
+    </PROPERTIES>
+  </WCMTEMPLATE>
+  <WCMTEMPLATE Version="6.0">
+    <PROPERTIES>
+      <TEMPNAME><![CDATA[index]]></TEMPNAME>
+      <TEMPTYPE>1</TEMPTYPE>
+      <TEMPEXT><![CDATA[html]]></TEMPEXT>
+      <OUTPUTFILENAME><![CDATA[index]]></OUTPUTFILENAME>
+      <VISUAL/>
+      <TEMPDESC/>
+    </PROPERTIES>
+  </WCMTEMPLATE>
+  <WCMTEMPLATE Version="6.0">
+    <PROPERTIES>
+      <TEMPNAME><![CDATA[top]]></TEMPNAME>
+      <TEMPTYPE>0</TEMPTYPE>
+      <TEMPEXT><![CDATA[]]></TEMPEXT>
+      <OUTPUTFILENAME><![CDATA[]]></OUTPUTFILENAME>
+      <VISUAL/>
+      <TEMPDESC><![CDATA[头部导航]]></TEMPDESC>
+    </PROPERTIES>
+  </WCMTEMPLATE>
+  <WCMTEMPLATE Version="6.0">
+    <PROPERTIES>
+      <TEMPNAME><![CDATA[备份]]></TEMPNAME>
+      <TEMPTYPE>1</TEMPTYPE>
+      <TEMPEXT><![CDATA[html]]></TEMPEXT>
+      <OUTPUTFILENAME><![CDATA[bak]]></OUTPUTFILENAME>
+      <VISUAL/>
+      <TEMPDESC/>
+    </PROPERTIES>
+  </WCMTEMPLATE>
+  <WCMTEMPLATE Version="6.0">
+    <PROPERTIES>
+      <TEMPNAME><![CDATA[[大连明智_313]默认文档模板]]></TEMPNAME>
+      <TEMPTYPE>2</TEMPTYPE>
+      <TEMPEXT><![CDATA[html]]></TEMPEXT>
+      <OUTPUTFILENAME><![CDATA[]]></OUTPUTFILENAME>
+      <VISUAL>0</VISUAL>
+      <TEMPDESC><![CDATA[[大连明智_313]默认文档模板]]></TEMPDESC>
+    </PROPERTIES>
+  </WCMTEMPLATE>
+  <WCMTEMPLATE Version="6.0">
+    <PROPERTIES>
+      <TEMPNAME><![CDATA[[大连明智_313]默认栏目模板]]></TEMPNAME>
+      <TEMPTYPE>1</TEMPTYPE>
+      <TEMPEXT><![CDATA[html]]></TEMPEXT>
+      <OUTPUTFILENAME><![CDATA[index]]></OUTPUTFILENAME>
+      <VISUAL>0</VISUAL>
+      <TEMPDESC><![CDATA[[大连明智_313]默认栏目模板]]></TEMPDESC>
+    </PROPERTIES>
+  </WCMTEMPLATE>
+  <WCMTEMPLATE Version="6.0">
+    <PROPERTIES>
+      <TEMPNAME><![CDATA[列表页]]></TEMPNAME>
+      <TEMPTYPE>1</TEMPTYPE>
+      <TEMPEXT><![CDATA[html]]></TEMPEXT>
+      <OUTPUTFILENAME><![CDATA[index]]></OUTPUTFILENAME>
+      <VISUAL/>
+      <TEMPDESC/>
+    </PROPERTIES>
+  </WCMTEMPLATE>
+  <WCMTEMPLATE Version="6.0">
+    <PROPERTIES>
+      <TEMPNAME><![CDATA[[大连明智_313]默认站点模板]]></TEMPNAME>
+      <TEMPTYPE>1</TEMPTYPE>
+      <TEMPEXT><![CDATA[html]]></TEMPEXT>
+      <OUTPUTFILENAME><![CDATA[index]]></OUTPUTFILENAME>
+      <VISUAL>0</VISUAL>
+      <TEMPDESC><![CDATA[[大连明智_313]默认站点模板]]></TEMPDESC>
+    </PROPERTIES>
+  </WCMTEMPLATE>
+</WCMTEMPLATES>

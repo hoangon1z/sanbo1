@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" http-equiv="Content-Type" content="text/html">
+    <title><TRS_DOCUMENT FIELD="DOCTITLE" AUTOLINK="false"/></title>
+    <style type="text/css">* {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #000;
+    }
+
+    .tpl-curpage {
+        width: 1200px;
+        height: 56px;
+        line-height: 56px;
+        margin: 20px auto;
+        padding-left: 40px;
+        background: #fff;
+        font-size: 14px;
+        box-shadow: 0px 2px 5px #3e85b4;
+    }
+
+    .tpl-main {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .tpl-title {
+        background: #fff;
+        font-size: 16px;
+        line-height: 2.5;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .tpl-content {
+        margin-bottom: 20px;
+        background: #fff;
+        text-indent: 2em;
+        padding: 20px;
+        word-break: break-all;
+    }
+
+    .tpl-attach-item {
+        padding-left: 40px;
+        margin-bottom: 20px;
+        background: #fff;
+    }
+
+    .tpl-attach-item img {
+        width: 200px;
+        height: auto;
+    }
+
+    .tpl-attach-tag {
+        padding: 10px 0;
+        font-weight: bold;
+    }        </style>
+</head>
+<body>
+<input type="hidden" id="headtag" name="headtag" value="政务公开" />
+<TRS_TEMPLATE TEMPNAME="top"></TRS_TEMPLATE>
+<div class="tpl-curpage">
+    <p>当前位置：&nbsp;<TRS_CURPAGE VALUE="->">显示当前位置</TRS_CURPAGE>
+    </p>
+</div>
+<div class="tpl-main">
+    <div class="tpl-title">
+        <p>
+            <TRS_DOCUMENT FIELD="DOCTITLE">标题</TRS_DOCUMENT>
+        </p>
+        <p>来源：
+            <TRS_DOCUMENT FIELD="FOCSOURCE" AUTOLINK="TRUE">文档来源</TRS_DOCUMENT> &nbsp;&nbsp;&nbsp;&nbsp; 时间：
+            <TRS_DATETIME>发布时间</TRS_DATETIME>
+        </p>
+    </div>
+    <div class="tpl-content">
+        <TRS_DOCUMENT field="DOCHTMLCON" dateformat="yyyy-MM-dd+HH:mm:ss" autocolor="TRUE" autoformat="FALSE"
+                      autoformattype="HTML,HTMLValue " autolink="FALSE" target="_blank" linkalt="FALSE"></TRS_DOCUMENT>
+    </div>
+    <div class="tpl-attach-item tpl-link-attach">
+        <p class="tpl-attach-tag">相关新闻：</p>
+        <TRS_RelNews>
+          <TRS_DOCUMENT FIELD="DOCTITLE" />
+          <BR></TRS_RelNews>
+    </div>
+    <div class="tpl-attach">
+        <div class="tpl-attach-item tpl-pic-attch"><p class="tpl-attach-tag">相关图片：</p>
+            <TRS_APPENDIX field="" mode="PIC" index="-1" memo="TRUE" beginmemo="<BR>图片说明：" endmemo="<BR>"
+                          seperator="<BR>" upload="TRUE">这里显示图片附件
+            </TRS_APPENDIX>
+        </div>
+        <div class="tpl-attach-item tpl-video-attach"><p class="tpl-attach-tag">相关附件：</p>
+            <TRS_APPENDIX mode="FILE" index="-1" target="_blank" autolink="TRUE" seperator="<br>" upload="TRUE">显示相关附件
+            </TRS_APPENDIX>
+        </div>
+    </div>
+</div>
+<TRS_TEMPLATE TEMPNAME="bottom"></TRS_TEMPLATE>
+</body>
+</html>

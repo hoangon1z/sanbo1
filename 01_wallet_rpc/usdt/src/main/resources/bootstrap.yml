@@ -1,0 +1,16 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.10.10.16:7000/eureka/
+  instance:
+      prefer-ip-address: true
+spring:
+  cloud:
+    config:
+      name: rpc-config
+      label: kick #对应的分支
+      discovery:
+        enabled: true #启用服务发现
+        service-id: app-config-server
+  profiles:
+    active: dev

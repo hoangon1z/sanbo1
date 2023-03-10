@@ -1,0 +1,14 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7000/eureka/
+spring:
+  cloud:
+    config:
+      name: cloud-config
+      label: kick #对应的分支
+      discovery:
+        enabled: true #启用服务发现
+        service-id: app-config-server
+  profiles:
+    active: dev

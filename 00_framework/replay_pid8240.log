@@ -1,0 +1,24 @@
+JvmtiExport can_access_local_variables 0
+JvmtiExport can_hotswap_or_post_breakpoint 0
+JvmtiExport can_post_on_exceptions 0
+# 116 ciObject found
+ciMethod java/lang/RuntimeException <init> (Ljava/lang/String;)V 2057 1 257 0 -1
+ciMethod sun/reflect/AccessorGenerator emitBoxingContantPoolEntries ()V 2097 1 256 0 -1
+ciMethod sun/reflect/AccessorGenerator sub (SS)S 2113 1 264 0 -1
+ciMethod sun/reflect/ByteVector add (B)V 0 0 1 0 -1
+ciMethod sun/reflect/ByteVectorImpl add (B)V 4097 1 603 0 -1
+ciMethod sun/reflect/ClassFileAssembler emitShort (S)V 3457 1 432 0 -1
+ciMethod sun/reflect/ClassFileAssembler emitByte (B)V 3553 1 444 0 -1
+ciMethod sun/reflect/ClassFileAssembler cpi ()S 2145 1 268 0 -1
+ciMethod sun/reflect/ClassFileAssembler emitConstantPoolUTF8 (Ljava/lang/String;)V 1297 17473 162 0 -1
+ciMethod sun/reflect/ClassFileAssembler emitConstantPoolClass (S)V 2153 1 269 0 -1
+ciMethod sun/reflect/ClassFileAssembler emitConstantPoolNameAndType (SS)V 2097 1 262 0 -1
+ciMethod sun/reflect/ClassFileAssembler emitConstantPoolMethodref (SS)V 2089 1 261 0 -1
+instanceKlass org/springframework/util/concurrent/ListenableFutureCallbackRegistry
+instanceKlass org/springframework/kafka/listener/BatchLoggingErrorHandler
+instanceKlass org/springframework/kafka/listener/BatchErrorHandler
+instanceKlass org/springframework/kafka/listener/LoggingErrorHandler
+instanceKlass org/springframework/kafka/listener/BatchAcknowledgingMessageListener
+instanceKlass org/springframework/kafka/listener/KafkaMessageListenerContainer$ListenerConsumer$1
+instanceKlass org/apache/kafka/common/utils/AppInfoParser$AppInfo
+instanceKlass org/apache/kafka/common/utils/AppInfoParser$AppInfoMBean

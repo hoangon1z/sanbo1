@@ -1,0 +1,17 @@
+*.zip
+bizzan_exchange_robot_new/.idea/workspace.xml
+### IDEA ###
+.idea/*
+*.iml
+*/target/*
+*/*.iml
+.idea
+target
+*.class
+*.original
+
+*.iml
+*.kotlin_module
+*.lst
+*.7z
+00_framework/crowd-funding/target/generated-sources/java/com/bizzan/bitrade/entity/QCrowdFunding.java
